@@ -1,6 +1,6 @@
 .git
 .modules
 .*cache*
-Puppetfile
+./Puppetfile
 *.log
 .resource_types
