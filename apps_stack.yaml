@@ -1,0 +1,19 @@
+apps:
+  - name: "puppetenterprise.harshamlab.site"
+    type: "vm"
+    clone_id: "9002"
+    app_version: "2023.5"
+    transport: ssh
+    plan: "puppetenterprise.pp"
+    plan_params: "puppetenterprise_params.json"
+  - name: "linux.harshamlab.site"
+    type: "vm"
+    count: 1
+    clone_id: "9001"
+    transport: ssh
+    plan: "baseline_linux.pp"
+    plan_params: "baseline_linux_params.json"
+config:
+  ssh:
+    user: serveradmin
+    password: "Rajesh12"
