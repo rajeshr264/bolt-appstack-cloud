@@ -5,6 +5,3 @@ modules:
 
 # - git: https://github.com/rajeshr264/bolt_appstack_cloud
 #   ref: main
-
-# modulepath:
-# - ../bolt_appstack_cloud

@@ -2,18 +2,18 @@ apps:
   - name: "puppetenterprise.harshamlab.site"
     type: "vm"
     clone_id: "9002"
-    app_version: "2023.5"
     transport: ssh
-    plan: "puppetenterprise.pp"
-    plan_params: "puppetenterprise_params.json"
+    plan: "bolt_appstack_cloud::pe_install"
+    plan_params: "/home/rajesh/proxmox/bolt/bolt_appstack_cloud_work/puppetenterprise_params.json"
   - name: "linux.harshamlab.site"
     type: "vm"
     count: 1
     clone_id: "9001"
     transport: ssh
-    plan: "baseline_linux.pp"
+    plan: "bolt_appstack_cloud::baseline_linux"
     plan_params: "baseline_linux_params.json"
 config:
   ssh:
     user: serveradmin
-    password: "Rajesh12"
+    private-key: "~/.ssh/automation"
+    native-ssh: true
