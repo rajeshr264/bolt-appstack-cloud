@@ -2,6 +2,3 @@
 name: pvecloud
 modules:
 - puppetlabs/peadm
-
-# - git: https://github.com/rajeshr264/bolt_appstack_cloud
-#   ref: main
