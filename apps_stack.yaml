@@ -4,7 +4,7 @@ apps:
     clone_id: "9002"
     transport: ssh
     plan: "bolt_appstack_cloud::pe_install"
-    plan_params: "/home/rajesh/proxmox/bolt/bolt_appstack_cloud_work/puppetenterprise_params.json"
+    plan_params: "puppetenterprise_params.json"
   - name: "linux.harshamlab.site"
     type: "vm"
     count: 1
@@ -17,3 +17,4 @@ config:
     user: serveradmin
     private-key: "~/.ssh/automation"
     native-ssh: true
+    run-as: "root"
