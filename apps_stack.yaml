@@ -7,7 +7,7 @@ apps:
     plan_params: "puppetenterprise_params.json"
   - name: "linux.harshamlab.site"
     type: "vm"
-    count: 1
+    count: 5
     clone_id: "9001"
     transport: ssh
     plan: "bolt_appstack_cloud::baseline_linux"
